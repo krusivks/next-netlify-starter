@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build", // Ensure this script is correctly configured
     "start": "next start",
     "export": "next build && next export"
   },
@@ -14,5 +14,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "description": "## Issue: Build Failing with Error Code 2\n\nThe build is failing with the error message: **\"Build script returned non-zero exit code: 2.\"** This indicates that the `npm build` script for your Next.js application encountered an error.\n\n### Solution:\n\nError code 2 typically suggests a configuration issue or a problem during the build process. To resolve this, follow these steps:\n\n1. **Review the Build Script**:\n   - Ensure the build script in your `package.json` is correct:\n     ```json\n     \"build\": \"next build\"\n     ```\n\n2. **Check Dependencies**:\n   - Confirm all dependencies are installed correctly by running:\n     ```bash\n     npm install\n     ```\n\n3. **Inspect for Errors**:\n   - Run the build command and review any error messages:\n     ```bash\n     npm run build\n     ```\n\n4. **Update Dependencies**:\n   - If needed, update your dependencies:\n     ```bash\n     npm update\n     ```\n\n5. **Check Environment Variables**:\n   - Ensure any required environment variables are set correctly.\n\nFollowing these steps should help troubleshoot and resolve the issues causing the build failure."
+  "diagnosis": "Line 113 indicates a 'build' script error in the package.json file.",
+  "solution": "Ensure that the 'build' script in the package.json file is correctly configured to build the project. Check for any syntax errors or missing commands in the script."
 }
