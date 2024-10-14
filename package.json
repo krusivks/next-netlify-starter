@@ -14,6 +14,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "diagnosis": "The build failure is caused by missing required dependencies.",
-  "solution": "To resolve this issue:\n1. Add a package.json file in the root of the project with the necessary dependencies.\n2. Ensure all required packages and their versions are included for the project to build successfully."
+  "engines": {
+    "node": "14.x",
+    "npm": "6.x"
+  }
 }
