@@ -10,8 +10,9 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f0f0;
+            background-color: #ffe4e1; /* Soft pink background */
             font-family: Arial, sans-serif;
+            margin: 0;
         }
         .button {
             padding: 15px 30px;
@@ -20,12 +21,12 @@
             cursor: pointer;
             border: none;
             border-radius: 5px;
-            background-color: #007BFF;
+            background-color: #ff69b4; /* Hot pink */
             color: white;
             transition: background-color 0.3s, transform 0.3s;
         }
         .button:hover {
-            background-color: #0056b3;
+            background-color: #ff1493; /* Deeper pink on hover */
             transform: scale(1.05);
         }
         .hidden {
@@ -35,6 +36,7 @@
             margin-top: 20px;
             font-size: 20px;
             text-align: center;
+            color: #d5006d; /* Darker pink for the message */
         }
     </style>
 </head>
