@@ -14,6 +14,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "diagnosis": "The build failure is caused by missing dependencies in the project.",
-  "solution": "To resolve this issue:\n1. Ensure you have a package.json file in the root directory of your project with the necessary dependencies.\n2. Run `npm install` to install the required dependencies.\n3. Verify that all required dependencies are listed in the package.json file.\n4. Retry building the project after adding the dependencies."
+  "diagnosis": "The build failure is caused by missing required dependencies.",
+  "solution": "To resolve this issue:\n1. Add a package.json file in the root of the project with the necessary dependencies.\n2. Ensure all required packages and their versions are included for the project to build successfully."
 }
