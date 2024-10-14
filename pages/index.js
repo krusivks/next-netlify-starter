@@ -1,23 +1,73 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Transisi</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .hidden {
+            display: none;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
 
-export default function Home() {
-  return (
-    <div className="container">
-      <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-      </main>
-
-      <Footer />
+    <div id="button-container">
+        <button class="button" id="button1" onclick="nextButton()">Jangan tekan aku</button>
+        <button class="button hidden" id="button2" onclick="nextButton()">Kok tekan aku? penasaran yaa?</button>
+        <button class="button hidden" id="button3" onclick="nextButton()">Bjir beneran penasaran dong</button>
+        <button class="button hidden" id="button4" onclick="nextButton()">Kasih tau g yh</button>
+        <button class="button hidden" id="button5" onclick="showMessage()">Yaudah deh nih</button>
     </div>
-  )
-}
+
+    <div class="message hidden" id="finalMessage">
+        Fey, sebenernya aku dari awal kenal sama kamu aslinya kamu orang yang ceria sama asik buat diajak ngobrol.. Jadi aku kepikiran dari saat awal kita kenal sampai kemarin kerja kelompok.. Mau ga Fey kamu sama aku official? :)
+    </div>
+
+    <script>
+        let currentButton = 1;
+
+        function nextButton() {
+            if (currentButton < 5) {
+                document.getElementById(`button${currentButton}`).classList.add('hidden');
+                currentButton++;
+                document.getElementById(`button${currentButton}`).classList.remove('hidden');
+            }
+        }
+
+        function showMessage() {
+            document.getElementById(`button${currentButton}`).classList.add('hidden');
+            document.getElementById('finalMessage').classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
