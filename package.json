@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build", // Ensure this script is correctly configured
+    "build": "next build",
     "start": "next start",
     "export": "next build && next export"
   },
@@ -14,6 +14,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "diagnosis": "The build failure is due to an EJSONPARSE error while parsing the package.json file at position 142. The error message indicates that there is an unexpected token '/' in the JSON structure.",
-  "solution": "To resolve this issue:\n1. Open the package.json file in the project repository.\n2. Navigate to position 142 in the file to identify the unexpected token '/'.\n3. Correct the JSON syntax error at that position by either removing the unexpected token '/' or fixing the syntax issue.\n4. After making the necessary adjustments, commit the changes to the repository.\n5. Trigger a new build on Netlify to ensure the issue is resolved successfully."
+  "diagnosis": "The build failure is caused by missing dependencies in the project.",
+  "solution": "To resolve this issue:\n1. Ensure you have a package.json file in the root directory of your project with the necessary dependencies.\n2. Run `npm install` to install the required dependencies.\n3. Verify that all required dependencies are listed in the package.json file.\n4. Retry building the project after adding the dependencies."
 }
