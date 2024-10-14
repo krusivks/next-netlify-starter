@@ -55,7 +55,7 @@
     </div>
 
     <script>
-        // Ensure proper JavaScript syntax
+        // JavaScript functions must be correctly structured
         let currentButton = 1;
 
         function nextButton() {
