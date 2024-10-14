@@ -55,6 +55,7 @@
     </div>
 
     <script>
+        // Ensure the JavaScript starts correctly
         let currentButton = 1;
 
         function nextButton() {
