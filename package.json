@@ -14,6 +14,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "diagnosis": "Line 113 indicates a 'build' script error in the package.json file.",
-  "solution": "Ensure that the 'build' script in the package.json file is correctly configured to build the project. Check for any syntax errors or missing commands in the script."
+  "diagnosis": "The build failure is due to an EJSONPARSE error while parsing the package.json file at position 142. The error message indicates that there is an unexpected token '/' in the JSON structure.",
+  "solution": "To resolve this issue:\n1. Open the package.json file in the project repository.\n2. Navigate to position 142 in the file to identify the unexpected token '/'.\n3. Correct the JSON syntax error at that position by either removing the unexpected token '/' or fixing the syntax issue.\n4. After making the necessary adjustments, commit the changes to the repository.\n5. Trigger a new build on Netlify to ensure the issue is resolved successfully."
 }
